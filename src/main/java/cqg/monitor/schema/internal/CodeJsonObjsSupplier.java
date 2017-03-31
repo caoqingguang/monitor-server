@@ -40,7 +40,7 @@ public final class CodeJsonObjsSupplier implements JsonObjsSupplier {
       .flatMap(tg -> getTgJson(tg).stream())
       .filter(json -> json != null)
       .collect(Collectors.toList());
-    return new JsonObjs("cqg").addDatas(list);
+    return new JsonObjs("code").addDatas(list);
   }
 
 
