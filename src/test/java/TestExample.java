@@ -10,6 +10,7 @@ import cqg.monitor.Monitor;
  */
 public class TestExample {
 
+  @Ignore
   @Test
   public void testForever() throws InterruptedException {
     //开启服务
