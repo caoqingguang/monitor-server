@@ -275,3 +275,7 @@ public class TestExample {
 ]
 
 ```
+
+## 项目扩展
+
+可通过 **Monitor.regSupplier(JsonObjsSupplier supplier)** 扩展自定义监控信息
