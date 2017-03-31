@@ -1,0 +1,10 @@
+
+1、main函数加
+设置监控端口，开启服务
+Monitor.start(8080);
+
+2、监控数据
+三个参数 （监控项，次数， 时间）
+Monitor.incrCountAndTimeBy("topic", 1, 46)
+
+
