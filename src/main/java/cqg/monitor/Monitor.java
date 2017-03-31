@@ -1,15 +1,14 @@
 package cqg.monitor;
 
-import cqg.monitor.schema.JsonObjs;
-import cqg.monitor.schema.JsonObjsSupplier;
-import cqg.monitor.schema.internal.SysJsonObjsSupplier;
-import cqg.monitor.schema.internal.JvmJsonObjsSupplier;
-import cqg.monitor.schema.internal.CodeJsonObjsSupplier;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import cqg.monitor.schema.JsonObjs;
+import cqg.monitor.schema.JsonObjsSupplier;
+import cqg.monitor.schema.internal.CodeJsonObjsSupplier;
+import cqg.monitor.schema.internal.JvmJsonObjsSupplier;
+import cqg.monitor.schema.internal.SysJsonObjsSupplier;
 
 /**
  * 统计专用客户端
@@ -19,7 +18,6 @@ public final class Monitor {
 
   private static final List<JsonObjsSupplier> dumpSuppiers=new ArrayList<>(4);
   private static CodeJsonObjsSupplier topicGroupCenter;
-  private static final Function<List<JsonObjs>,String> convert= CqgJsonHelper::fmtJsonObjsList;
   private static boolean hasStart;
 
   public synchronized static void start(int port){
@@ -88,7 +86,7 @@ public final class Monitor {
     List<JsonObjs> collect = dumpSuppiers.stream()
       .map(supplier -> supplier.getJsonObj())
       .collect(Collectors.toList());
-    return convert.apply(collect);
+    return CqgJsonHelper.fmtJsonObjsList(collect);
   }
 
 }
