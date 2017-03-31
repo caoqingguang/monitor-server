@@ -55,7 +55,35 @@ public class TestExample {
 
 获取数据 get请求 ip:8080/monitor
 
-数据信息如下
+先对每一项信息做下说明
+
+每一大项监控信息
+```
+{
+    type: 监控类型,
+    data: [
+        若干小项监控
+    ]
+}
+```
+
+每一小项监控信息
+```
+{
+    time: 时间戳,
+    flags: {
+         若干key-value
+    },
+    values: {
+        若干key-value
+    },
+    desc: {
+        若干key-value
+    }
+}
+```
+
+详细数据信息如下
 ```
 [
     {
@@ -275,6 +303,7 @@ public class TestExample {
 ]
 
 ```
+
 
 ## 项目扩展
 
