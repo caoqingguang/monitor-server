@@ -59,6 +59,7 @@ public class TestExample {
 ```
 [
     {
+        #项目启动信息
         type: "sys",
         data: [
             {
@@ -79,7 +80,8 @@ public class TestExample {
         ]
     },
     {
-        type: "cqg",
+        #程序埋点信息
+        type: "code",
         data: [
             {
                 time: 1490962380000,
@@ -112,9 +114,11 @@ public class TestExample {
         ]
     },
     {
+        # jvm 运行信息
         type: "jvm",
         data: [
             {
+                #线程信息
                 time: 1490962380000,
                 flags: {
                     jvm_thread: "jvm_thread"
@@ -127,6 +131,7 @@ public class TestExample {
                 }
             },
             {
+                # 堆信息
                 time: 1490962380000,
                 flags: {
                     jvm_heap_info: "jvm_heap_info"
@@ -141,6 +146,7 @@ public class TestExample {
                 }
             },
             {
+                # Young-GC信息
                 time: 1490962380000,
                 flags: {
                     jvm_gc_type: "YGC",
@@ -155,6 +161,7 @@ public class TestExample {
                 }
             },
             {
+                # Full-GC信息
                 time: 1490962380000,
                 flags: {
                     jvm_gc_type: "FGC",
@@ -169,6 +176,7 @@ public class TestExample {
                 }
             },
             {
+                # 代码区内存占用  jdk1.8
                 time: 1490962380000,
                 flags: {
                     jvm_mem_type: "Other",
@@ -184,6 +192,7 @@ public class TestExample {
                 }
             },
             {
+                # 元数据内存占用 jdk1.8
                 time: 1490962380000,
                 flags: {
                     jvm_mem_type: "Other",
@@ -214,6 +223,7 @@ public class TestExample {
                 }
             },
             {
+                # eden 区内存占用
                 time: 1490962380000,
                 flags: {
                     jvm_mem_type: "Eden",
@@ -229,6 +239,7 @@ public class TestExample {
                 }
             },
             {
+                # 幸存代 内存占用
                 time: 1490962380000,
                 flags: {
                     jvm_mem_type: "Survivor",
@@ -244,6 +255,7 @@ public class TestExample {
                 }
             },
             {
+                # 老年代 内存占用
                 time: 1490962380000,
                 flags: {
                     jvm_mem_type: "OldGen",
